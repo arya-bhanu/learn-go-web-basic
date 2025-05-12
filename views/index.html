@@ -1,0 +1,41 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Document</title>
+  </head>
+  <body>
+    <h2>FORM "YOUR NAME"</h2>
+    <form action="/save" method="post">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Masukkan nama anda"
+      />
+    </form>
+    <h2>FORM UPLOAD FILE</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="file">The File</label>
+      <input
+        type="file"
+        name="file"
+        id="file"
+        placeholder="Insert your file here"
+        required
+      />
+      <label for="alias">Alias file</label>
+      <input
+        type="text"
+        name="alias"
+        id="alias"
+        placeholder="Wanna to put your own file naming?"
+      />
+      <button>Upload!</button>
+    </form>
+  </body>
+</html>
+{{end}}
